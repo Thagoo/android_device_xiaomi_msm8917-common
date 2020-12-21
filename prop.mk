@@ -154,22 +154,25 @@ ro.lmk.low=1001 \
 ro.lmk.medium=800 \
 ro.lmk.critical=0 \
 ro.lmk.critical_upgrade=false \
-ro.lmk.upgrade_pressure=100 \
-ro.lmk.downgrade_pressure=100 \
+ro.lmk.upgrade_pressure=40 \
+ro.lmk.downgrade_pressure=40 \
+ro.lmk.use_minfree_levels=true
+ro.lmk.use_psi=true \
+ro.lmk.swap_util_max=100 \
+ro.lmk.swap_free_low_percentage=10 \
+ro.lmk.psi_partial_stall_ms=250 \
+ro.lmk.psi_complete_stall_ms=700 \
+ro.lmk.thrashing_limit=40 \
+ro.lmk.thrashing_limit_decay=60 \
+ro.lmk.swap_util_max=100 \
+ro.lmk.kill_timeout_ms=100
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.qti.sys.fw.bservice_enable=true\
 ro.vendor.qti.am.reschedule_service=true\
-ro.lmk.use_psi=true \
-ro.sys.fw.bg_apps_limit=50 \
-ro.vendor.qti.sys.fw.bg_apps_limit=50 \
-ro.config.sdha_apps_bg_max=64 \
-ro.config.sdha_apps_bg_min=8 \
-ro.sys.fw.bg_cached_ratio=0.33 \
-ro.sys.fw.mOomMinFree4=146880 \
-ro.sys.fw.mOomMinFree5=215000 \
-ro.sys.fw.mOomMinFree6=398048
+ro.sys.fw.bg_apps_limit=35 \
+ro.vendor.qti.sys.fw.bg_apps_limit=35
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
