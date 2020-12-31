@@ -383,6 +383,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
+
+# Vanilla 
+ifeq ($(VANILLA_BUILD),true)
+PRODUCT_PACKAGES += \
+    messaging \
+    GCamGOPrebuilt \
+    Calender \
+    DeskClock \
+    Browser2
+
+endif
+
 # VNDK
 PRODUCT_PACKAGES += \
     vndk-sp
